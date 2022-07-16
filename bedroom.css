@@ -1,0 +1,25 @@
+body{
+    background-image: linear-gradient(to right top,rgb(250, 141, 159),rgb(249, 190, 81),rgb(250, 141, 159),rgb(249, 190, 81));
+    color: black;
+}
+
+.bed_heading
+{
+font-size: 23px;
+width: 100%;
+margin: 0px;
+background-color: rgb(219, 73, 121);
+padding: 15px;
+}
+
+#status
+{
+font-size: 18px;
+}
+
+canvas{
+    border: 5px solid rgb(249, 190, 81);
+    box-shadow: 5px 5px 5px rgb(219, 73, 121);
+    border-radius: 20px;
+}
+
