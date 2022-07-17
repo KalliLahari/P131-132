@@ -23,3 +23,12 @@ canvas{
     border-radius: 20px;
 }
 
+#btn_back{
+    background-color: white;
+    color: red;
+    font-size: 23px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: monospace;
+}
+

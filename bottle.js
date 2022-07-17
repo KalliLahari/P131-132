@@ -1,6 +1,7 @@
 img="";
-
 status1="";
+objects=[];
+
 
 function setup(){
 canvas=createCanvas(500,400);
@@ -21,20 +22,27 @@ function gotResult(error,results){
     }
     else{
         console.log(results);
+        objects=results;
     }
 }
 
 function preload(){
-    img=loadImage("1632313774_6.jpg");
+    img=loadImage("bottle.jpg");
     }
     
     function draw(){
     image(img,0,0,500,400);
-    fill("red");
-    noFill();
-    text("Fruits",48,99);
-    stroke("red");
-    rect(38,69,394,240);
+    if(status1 !=""){
+        for(i=0;i<objects.length;i++){
+            document.getElementById("status").innerHTML="Status : Object Detected";
+            fill("red");
+            percent=floor(objects[i].confidence*100);
+            text(objects[i].label+" "+percent+"%",objects[i].x,objects[i].y);
+            noFill();
+            stroke("red");
+            rect(objects[i].x,objects[i].y,objects[i].width,objects[i].height);
+        }
+    }
     }
 
     function back(){

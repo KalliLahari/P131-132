@@ -1,6 +1,7 @@
 img="";
 status1="";
 
+
 function setup(){
 canvas=createCanvas(500,400);
 canvas.center();
@@ -34,4 +35,8 @@ function preload(){
     text("Bed",210,170);
     stroke("red");
     rect(200,150,260,240);
+    }
+
+    function back(){
+        window.location="index.html";
     }
